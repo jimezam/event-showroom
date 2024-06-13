@@ -15,9 +15,9 @@ return new class extends Migration
             $table->comment('Sections that group events');
 
             $table->uuid('id')->primary();
-            $table->boolean('active');
             $table->string('name', 128)->unique();
             $table->text('description')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

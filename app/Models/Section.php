@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use App\Models\Scopes\IsActiveScope;
-use Illuminate\Database\Eloquent\Attributes\ScopedBy;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-#[ScopedBy([IsActiveScope::class])]
 class Section extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory, HasUuids, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.

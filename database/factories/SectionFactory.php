@@ -17,7 +17,6 @@ class SectionFactory extends Factory
     public function definition(): array
     {
         return [
-            'active' => fake()->boolean(),
             'name' => fake()->sentence(3),
             'description' => fake()->text()
         ];
